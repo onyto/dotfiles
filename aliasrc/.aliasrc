@@ -1,0 +1,14 @@
+alias sudo='sudo -v; sudo '
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Edit configuration files
+alias eZ='$EDITOR ~/.zshrc'
+alias eNV='$EDITOR ~/.config/nvim/init.lua'
+alias eT='$EDITOR ~/.config/tmux/tmux.conf'
+alias eA='$EDITOR ~/.config/alacritty/alacritty.yml'
+alias eAL='$EDITOR ~/.aliasrc'
+
+alias code='NVIM_APPNAME="nvim-kickstart" nvim'
