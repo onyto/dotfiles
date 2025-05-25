@@ -9,6 +9,9 @@ palette = "catppuccin_latte"
 [directory]
 truncation_length = 0
 
+[hostname]
+ssh_symbol = "🖥️ "
+
 # palette tables should be last in the config ⚓️
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
