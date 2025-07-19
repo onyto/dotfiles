@@ -2,7 +2,7 @@
 
 # Path
 typeset -U path
-path=(~/.local/bin /opt/nvim-linux-arm64/bin $path)
+path=(~/.local/bin $path)
 export PATH
 
 # XDG Base Directory Specification

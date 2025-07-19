@@ -1,5 +1,8 @@
 # .zshrc - for interactive shells only
 
+# Docker completions
+[[ -d $HOME/.docker/completions ]] && FPATH="$HOME/.docker/completions:$FPATH"
+
 # Completion system
 autoload -Uz compinit
 compinit
