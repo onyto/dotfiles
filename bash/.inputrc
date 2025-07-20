@@ -1,0 +1,14 @@
+$include /etc/inputrc
+
+# History search mode
+# "\e[A": history-search-backward
+# "\e[B": history-search-forward
+
+# Faster completion
+# set show-all-if-unmodified On
+set show-all-if-ambiguous On
+
+set completion-ignore-case On
+
+set bind-tty-special-chars off
+"\C-w": backward-kill-word
