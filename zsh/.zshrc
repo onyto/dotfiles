@@ -64,6 +64,13 @@ if [[ -d /usr/share/doc/fzf ]]; then
     . /usr/share/doc/fzf/examples/completion.zsh
 fi
 
+function sync_tmux_environment_with_shell() {
+  if [ -n "${TMUX}" ]; then
+    eval "$(tmux show-environment -s)"
+  fi
+}
+add-zsh-hook precmd sync_tmux_environment_with_shell
+
 # Starship prompt
 if command -v starship >/dev/null 2>&1; then
     eval "$(starship init zsh)"
