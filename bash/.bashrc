@@ -76,6 +76,14 @@ elif [[ -d /usr/share/doc/fzf ]]; then
     . /usr/share/doc/fzf/examples/completion.bash
 fi
 
+# Synchronize tmux environment variables with the shell
+function prompt_command() {
+  if [ -n "${TMUX}" ]; then
+    eval "$(tmux show-environment -s)"
+  fi
+}
+PROMPT_COMMAND=prompt_command
+
 # Starship prompt
 if command -v starship >/dev/null 2>&1; then
     eval "$(starship init bash)"
