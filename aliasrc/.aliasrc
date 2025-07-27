@@ -3,6 +3,9 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 # Edit configuration files
 alias eZ='$EDITOR ~/.zshrc'
