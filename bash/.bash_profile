@@ -21,6 +21,7 @@ fi
 # Environment variables
 export EDITOR="nvim"
 export VISUAL="nvim --clean"
+export PAGER="less"
 # export TERMINAL="xterm-256color"
 # export BROWSER="/usr/bin/firefox"
 
