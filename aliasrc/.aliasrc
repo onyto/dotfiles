@@ -1,11 +1,15 @@
 alias sudo='sudo -v; sudo '
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --quoting-style=literal'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias ffprobe='ffprobe -hide_banner'
+
+# Improved copy
+alias copy='rsync --archive --info=progress2 --partial'
 
 # Edit configuration files
 alias eZ='$EDITOR ~/.zshrc'
