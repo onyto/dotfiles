@@ -69,11 +69,9 @@ fi
 if [[ -d /usr/share/fzf ]]; then
     export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
     . /usr/share/fzf/key-bindings.bash
-    . /usr/share/fzf/completion.bash
 elif [[ -d /usr/share/doc/fzf ]]; then
     export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
     . /usr/share/doc/fzf/examples/key-bindings.bash
-    . /usr/share/doc/fzf/examples/completion.bash
 fi
 
 # Synchronize tmux environment variables with the shell
