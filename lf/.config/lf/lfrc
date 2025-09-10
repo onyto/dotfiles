@@ -25,6 +25,10 @@ set scrolloff 10
 # refresh the directory status every x seconds
 set period 1
 
+# enable file and directory information like rangers defaults
+set dircounts
+set info size
+
 # V29+ FEATURE! | Use the `dim` attribute instead of underline for the cursor in the preview pane
 #set cursorpreviewfmt "\033[7;2m"
 
@@ -125,6 +129,11 @@ cmd follow-link %{{
 }}
 map gL follow-link
 
+# bookmarks
+map gs cd /mnt/fast_storage
+map gm cd /mnt/fast_storage/media
+#map gd cd /mnt/fast_storage/data
+
 # rename with the cursor placed at the beginning
 map I :rename; cmd-home
 # rename with the cursor placed at the end
@@ -139,3 +148,18 @@ cmd pager ${{
     fi
 }}
 
+# fzf
+cmd fzf_jump ${{
+    #res="$(find . -maxdepth 1 | fzf --reverse --header="Jump to location")"
+    res="$(find . | fzf --reverse --header="Jump to location")"
+    if [ -n "$res" ]; then
+        if [ -d "$res" ]; then
+            cmd="cd"
+        else
+            cmd="select"
+        fi
+        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+        lf -remote "send $id $cmd \"$res\""
+    fi
+}}
+map <c-f> :fzf_jump
