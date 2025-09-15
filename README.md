@@ -1,8 +1,22 @@
-# dotfiles
-My dotfiles
+# Dotfiles
 
-use stow -t $HOME for user dots and -t /etc for global dots
+My personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
-use stow --no-folding for linking files instead of the full dir (useful for linking only the tmux.conf if there also exists a plugins folder within tmux)
+## Requirements
 
-use stow --dotfiles once it's fixed in v.2.4.0
+- stow - version 2.4.0 or newer
+
+## Usage
+
+Deploy with:
+
+```stow -t $HOME --dotfiles --no-folding --verbose```
+
+- ```-t $HOME``` → Target directory (your home folder)
+- ```--dotfiles``` → Treat hidden files (those starting with a dot) as regular files
+- ```--no‑folding``` → Prevent Stow from collapsing directories that contain a single item
+- ```--verbose``` → Show detailed output so you can see what’s being linked.
+
+Remove with:
+
+```stow -D -t $HOME --dotfiles --no-folding```
