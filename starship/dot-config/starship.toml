@@ -45,8 +45,8 @@ symbol = "bun "
 [c]
 symbol = "C "
 
-[cpp]
-symbol = "C++ "
+# [cpp]
+# symbol = "C++ "
 
 [cobol]
 symbol = "cobol "
@@ -165,7 +165,7 @@ Amazon = "amz "
 Android = "andr "
 Arch = "rch "
 Artix = "atx "
-Bluefin = "blfn "
+#Bluefin = "blfn "
 CachyOS = "cach "
 CentOS = "cent "
 Debian = "deb "
@@ -221,8 +221,8 @@ symbol = "php "
 [pijul_channel]
 symbol = "pijul "
 
-[pixi]
-symbol = "pixi "
+# [pixi]
+# symbol = "pixi "
 
 [pulumi]
 symbol = "pulumi "
