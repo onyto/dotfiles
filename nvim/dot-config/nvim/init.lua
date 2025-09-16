@@ -56,6 +56,12 @@ vim.o.splitbelow = true
 -- Add zip plugin support for .cbz files
 vim.g.zipPlugin_ext = (vim.g.zipPlugin_ext or "*.zip,*.jar,*.xpi") .. ",*.cbz"
 
+-- Tab settings
+vim.o.expandtab      = true   -- Use spaces instead of real TAB characters
+vim.o.shiftwidth     = 4      -- Number of spaces used for << and >> commands
+vim.o.tabstop        = 4      -- Number of spaces a TAB counts for (visual width)
+vim.o.softtabstop    = 4      -- How many spaces to insert when you press <Tab>
+
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
