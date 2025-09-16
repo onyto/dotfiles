@@ -19,3 +19,4 @@ alias eA='$EDITOR ~/.config/alacritty/alacritty.yml'
 alias eAL='$EDITOR ~/.aliasrc'
 
 alias code='NVIM_APPNAME="nvim-kickstart" nvim'
+alias lf=lfcd

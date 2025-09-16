@@ -82,6 +82,15 @@ function prompt_command() {
 }
 PROMPT_COMMAND=prompt_command
 
+# Change dir to workdir when lf quits
+if command -v lf >/dev/null 2>&1; then
+lfcd () {
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    cd "$(command lf -print-last-dir "$@")"
+}
+fi
+
+
 # Starship prompt
 if command -v starship >/dev/null 2>&1; then
     eval "$(starship init bash)"
