@@ -99,6 +99,10 @@ cmd fzf_jump ${{
 }}
 map <c-f> :fzf_jump
 
+# quit without changing directories when using lfcd
+# does not work with zsh!
+map Q %lf -remote "send $id :cd \"$OLDPWD\"; quit"
+
 # execute current file (must be executable)
 # map x $$f
 # map X !$f
